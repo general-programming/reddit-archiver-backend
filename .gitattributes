@@ -1,0 +1,4 @@
+# ensure all source files are normalized to LF on commit
+*.js text=auto eol=lf
+*.ts text=auto eol=lf
+*.json text=auto eol=lf

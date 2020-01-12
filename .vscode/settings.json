@@ -1,0 +1,7 @@
+{
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": false,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.tabSize": 4
+}

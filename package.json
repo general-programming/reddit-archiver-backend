@@ -1,39 +1,53 @@
 {
-  "name": "reddit-archiver-backend",
-  "version": "0.1.0",
-  "description": "Tool for archiving Reddit threads",
-  "main": "index.js",
-  "scripts": {
-    "test": "npm test",
-    "ts:watch": "tsc -w",
-    "start": "node index",
-    "lint": "eslint --color ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/general-programming/reddit-archiver-backend.git"
-  },
-  "keywords": [
-    "reddit",
-    "archiver"
-  ],
-  "author": "General Programming",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/general-programming/reddit-archiver-backend/issues"
-  },
-  "homepage": "https://github.com/general-programming/reddit-archiver-backend#readme",
-  "devDependencies": {
-    "@types/node": "^13.1.6",
-    "@typescript-eslint/eslint-plugin": "^2.15.0",
-    "@typescript-eslint/parser": "^2.15.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1",
-    "typescript": "^3.7.4"
-  },
-  "dependencies": {
-    "comedy": "^2.1.1"
-  }
+	"name": "reddit-archiver-backend",
+	"version": "0.1.0",
+	"description": "Tool for archiving Reddit threads",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm test",
+		"ts:watch": "tsc -w",
+		"start": "node index",
+		"lint": "eslint --color ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/general-programming/reddit-archiver-backend.git"
+	},
+	"keywords": [
+		"reddit",
+		"archiver"
+	],
+	"author": "General Programming",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/general-programming/reddit-archiver-backend/issues"
+	},
+	"homepage": "https://github.com/general-programming/reddit-archiver-backend#readme",
+	"devDependencies": {
+		"@types/node": "^13.1.6",
+		"@typescript-eslint/eslint-plugin": "^2.15.0",
+		"@typescript-eslint/parser": "^2.15.0",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.9.0",
+		"eslint-plugin-prettier": "^3.1.2",
+		"husky": "^4.0.7",
+		"lint-staged": "^9.5.0",
+		"prettier": "^1.19.1",
+		"ts-node": "^8.6.1",
+		"typescript": "^3.7.4"
+	},
+	"dependencies": {
+		"comedy": "^2.1.1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix",
+			"git add"
+		]
+	}
 }
