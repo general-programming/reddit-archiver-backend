@@ -37,7 +37,8 @@
 		"typescript": "^3.7.4"
 	},
 	"dependencies": {
-		"comedy": "^2.1.1"
+		"comedy": "^2.1.1",
+		"typeorm": "^0.2.22"
 	},
 	"husky": {
 		"hooks": {
